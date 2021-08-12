@@ -21,7 +21,7 @@ public class LoanStatusService {
 
 
     public void updateLoanStatus(String accessToken){
-        Integer nbOfUpdateLoan = feignProxy.updateLoanStatus(accessToken);
+        Long nbOfUpdateLoan = feignProxy.updateLoanStatus(accessToken);
     }
 
     public List<Loan> getDelay(String accessToken){
