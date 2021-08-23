@@ -39,7 +39,8 @@ public class ScheduledTaskLauncher {
      * First, get a security token with batch account,
      * then run the mail task.
      */
-    @Scheduled(cron="*/5 * * * * ?")
+    
+    @Scheduled(cron="0 0 1 * * ?")
     public void runScheduledTask(){
         String accessToken = loginService.authenticateBatch();
         System.out.println(accessToken);
