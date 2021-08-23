@@ -73,6 +73,6 @@ You can access the web application at port localhost:/8080 from your browser if 
 You will find each microservices's properties configuration in:
 
 src/main/resources/application.properties
-Author:
 
+Author:
 Emilie Balsen - as part of my training as a java application developer at OpenClassrooms.
