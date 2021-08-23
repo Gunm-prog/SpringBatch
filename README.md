@@ -17,7 +17,7 @@ The website will allow users to follow their book loans through the web interfac
 
 Search for books and see the number of available copies. View their current loans. The loan of a book can be extended only once. The extension adds a new loan period (4 weeks) to the initial period. A batch: This software for automated processing will send reminder emails to users who have not returned the books at the end of the loan period. The sending will be automatic at the frequency of one per day.
 
-The web API:
+The web Client:
 
 The website as well as the batch will communicate with this software in REST in order to know the information related to the Database.
 
