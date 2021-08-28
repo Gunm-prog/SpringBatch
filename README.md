@@ -62,13 +62,20 @@ In the terminal, enter the following commands:
 
 mvn clean package spring-boot: repackage, then java -jar target\Lib7-0.0.1-SNAPSHOT.jar
 
-To see what the logged-in user can do (see their book loans' details and book loans' list in their dashboard), here are the necessary identifiers (username and password) when connecting: username = lily@hotmail.com password = password username = neo@hotmail.com password = password username = chris@hotmail.com password = password
+To see what the logged-in user can do (see their book loans' details and book loans' list in their dashboard), here are the necessary identifiers (username and password) when connecting:
+username = lily@hotmail.com password = password
+username = neo@hotmail.com password = Password31
+username = tom@hotmail.com password = Password32
+You can also register a new user
 
 Launch:
 
 First run Lib7, then library7WebClient and finally SpringBatch.
 
 You can access the web application at port localhost:/8080 from your browser if you have not changed the "server.port.properties" in application.properties'file.
+
+In order to test the Batch, create a Ethereal account: https://ethereal.email/. When the account is created, go to the Spring Batch project application properties file,
+in line spring.mail.username= your ethereal e-mail and spring.mail.password= your ethereal password.
 
 You will find each microservices's properties configuration in:
 
