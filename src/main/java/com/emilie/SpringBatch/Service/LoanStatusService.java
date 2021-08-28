@@ -15,16 +15,10 @@ public class LoanStatusService {
 
     @Autowired
     public LoanStatusService(FeignProxy feignProxy) {
-        this.feignProxy = feignProxy;
+        this.feignProxy=feignProxy;
     }
 
-
-
-    public void updateLoanStatus(String accessToken){
-        Long nbOfUpdateLoan = feignProxy.updateLoanStatus(accessToken);
-    }
-
-    public List<Loan> getDelay(String accessToken){
+    public List<Loan> getDelay(String accessToken) {
         return feignProxy.getLoanDelayLoan( accessToken );
     }
 }

@@ -23,11 +23,12 @@ public class ScheduledTaskLauncher {
     private final LoginService loginService;
 
 
+
     @Autowired
     public ScheduledTaskLauncher(JavaMailSenderService javaMailSenderService, LoanStatusService loanStatusService,
                                  LoginService loginService) {
-        this.javaMailSenderService = javaMailSenderService;
-        this.loanStatusService = loanStatusService;
+        this.javaMailSenderService=javaMailSenderService;
+        this.loanStatusService=loanStatusService;
         this.loginService=loginService;
 
     }
@@ -35,33 +36,18 @@ public class ScheduledTaskLauncher {
     /**
      * Scheduled task run in loop for the demo
      * (cron="0 0 1 * * ?") prod context : run task every days at 01:00 am
-     *
+     * <p>
      * First, get a security token with batch account,
      * then run the mail task.
      */
-    
+
     @Scheduled(cron="0 0 1 * * ?")
-    public void runScheduledTask(){
-        String accessToken = loginService.authenticateBatch();
-        System.out.println(accessToken);
-        List<Loan> delayedLoans = loanStatusService.getDelay( accessToken );
-        System.out.println(delayedLoans);
-        javaMailSenderService.sendRecoveryMail(delayedLoans);
+    public void runScheduledTask() {
+        String accessToken=loginService.authenticateBatch();
+        System.out.println( accessToken );
+        List<Loan> delayedLoans=loanStatusService.getDelay( accessToken );
+        System.out.println( delayedLoans );
+        javaMailSenderService.sendRecoveryMail( delayedLoans );
     }
-
-    /**
-     * Scheduled task run in loop for the demo
-     * (cron="0 0 3 * * ?") prod context : run task every days at 03:00 am
-     *
-     * First, get a security token with batch account,
-     * then run the mail task.
-     */
-/*    @Scheduled(cron="0 0 3 * * ?")
-    public void runScheduledTask(){
-        //String accessToken = feignLoanProxy.authenticate(new UserAccountJwt()).getHeaders().getFirst("Authorization");
-        loanStatusService.updateLoanStatus();
-        javaMailSenderService.sendRecoveryMail();
-    }*/
-
 
 }

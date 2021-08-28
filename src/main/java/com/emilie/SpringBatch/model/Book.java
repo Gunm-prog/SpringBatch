@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
-public class Book implements Serializable/*, List<BookDto> */ {
+public class Book implements Serializable {
 
     public static final long serialVersionUID=1L;
 

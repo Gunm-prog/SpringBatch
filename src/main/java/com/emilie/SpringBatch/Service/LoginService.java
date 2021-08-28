@@ -14,11 +14,11 @@ public class LoginService {
 
     @Autowired
     public LoginService(FeignProxy feignProxy) {
-        this.feignProxy = feignProxy;
+        this.feignProxy=feignProxy;
     }
 
-    public String authenticateBatch(){
-        return feignProxy.login(new UserAccountJwt());
+    public String authenticateBatch() {
+        return feignProxy.login( new UserAccountJwt() );
     }
 
 }
