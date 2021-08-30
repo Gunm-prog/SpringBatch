@@ -49,9 +49,9 @@ Install Tomcat(9).
 
 Make a git clone of the following repositories:
 
-- Lib7, API (https://github.com/GunmProg/Lib7);
-- library7WebClient, web application (https://github/GunmProg/library7WebClient);
-- SpringBatch, batch (https://github/GunmProg/SpringBatch).
+- Lib7, API (https://github.com/Gunm-Prog/Lib7);
+- library7WebClient, web application (https://github.com/Gunm-Prog/library7WebClient);
+- SpringBatch, batch (https://github.com/Gunm-Prog/SpringBatch).
 Open these microservices in Intellij Idea.
 
 In the Lib7 project, go to the application.properties file, in line "spring.jpa.hibernate.ddl-auto =", put configuration mode on "create".
